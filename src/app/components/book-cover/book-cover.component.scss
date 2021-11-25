@@ -1,0 +1,54 @@
+// Variables
+$light-brown: #a0522d;
+$dark-brown: #804529;
+$fonts: 'Eras Bold ITC', 'Times New Roman', Times, serif;
+
+// Styling
+.cover {
+    background-color: $light-brown;
+    border-radius: 10px;
+    width: 25rem;
+    height: 30rem;
+}
+
+.binder {
+    background-color: $dark-brown;
+    width: 5rem;
+    height: 30rem;
+    margin-right: 5rem
+}
+
+.binder::before {
+    content: '';
+    position: absolute;
+    border-right: 5px $light-brown dashed;
+    width: 5rem;
+    height: 28rem;
+    right: 1rem;
+    top: 1rem;
+}
+
+.title {
+    bottom: 10rem;
+    margin-left: 2rem;
+    font-family: $fonts;
+}
+
+.subtitle {
+    bottom: 14rem;
+    margin-left: 2rem;
+    font-family: $fonts;
+    opacity: 0.5;
+}
+
+.ribbon {
+    width: 4rem;
+    height: 3rem;
+    margin-left: 10rem;
+    margin-top: 12rem;
+    transition: 0.4s;
+}
+
+.ribbon:hover {
+    margin-left: 12rem;
+}
