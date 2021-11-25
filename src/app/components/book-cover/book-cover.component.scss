@@ -29,26 +29,19 @@ $fonts: 'Eras Bold ITC', 'Times New Roman', Times, serif;
 }
 
 .title {
-    bottom: 10rem;
-    margin-left: 2rem;
+    top: 50%;
     font-family: $fonts;
-}
-
-.subtitle {
-    bottom: 14rem;
-    margin-left: 2rem;
-    font-family: $fonts;
-    opacity: 0.5;
 }
 
 .ribbon {
     width: 4rem;
     height: 3rem;
-    margin-left: 10rem;
-    margin-top: 12rem;
+    top: 40%;
+    left: 50%;
+    margin-left: 12rem;
     transition: 0.4s;
 }
 
 .ribbon:hover {
-    margin-left: 12rem;
+    margin-left: 14rem;
 }
