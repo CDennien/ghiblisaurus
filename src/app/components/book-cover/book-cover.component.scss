@@ -7,25 +7,25 @@ $fonts: 'Eras Bold ITC', 'Times New Roman', Times, serif;
 .cover {
     background-color: $light-brown;
     border-radius: 10px;
-    width: 25rem;
-    height: 30rem;
+    width: 80%;
+    height: 60%;
 }
 
 .binder {
     background-color: $dark-brown;
-    width: 5rem;
-    height: 30rem;
-    margin-right: 5rem
+    width: 10%;
+    height: 60%;
+    left: 15%;
 }
 
 .binder::before {
     content: '';
     position: absolute;
     border-right: 5px $light-brown dashed;
-    width: 5rem;
-    height: 28rem;
-    right: 1rem;
-    top: 1rem;
+    width: 10%;
+    height: 90%;
+    right: 10%;
+    top: 5%;
 }
 
 .title {
@@ -34,14 +34,29 @@ $fonts: 'Eras Bold ITC', 'Times New Roman', Times, serif;
 }
 
 .ribbon {
-    width: 4rem;
-    height: 3rem;
+    width: 10%;
+    height: 5%;
     top: 40%;
-    left: 50%;
-    margin-left: 12rem;
+    right: 0;
     transition: 0.4s;
 }
 
-.ribbon:hover {
-    margin-left: 14rem;
+// Media Query
+@media (min-width: 500px) {
+  .cover {
+    max-width: 30%;
+  }
+
+  .binder {
+    width: 5%;
+    left: 37%;
+  }
+
+  .ribbon {
+    right: 29%;
+  }
+
+  .ribbon:hover {
+    right: 26%;
+  }
 }

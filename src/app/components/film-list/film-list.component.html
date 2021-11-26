@@ -1,10 +1,11 @@
 <div class="app-film-list">
     <div class="app-film-header px-4 pt-4">
-        <h6>Ghibli Film List</h6>
-        <small class="fw-light">Select a Title For Further Info</small>
+        <h5>Ghibli Film List</h5>
+        <h6 class="fw-light">Select a Title For Further Info</h6>
+        <hr>
     </div>
 
-    <ul class="app-films list-group list-group-flush">
+    <ul class="app-films list-group list-group-flush px-4">
         <li *ngFor="let film of films" routerLink="/film/{{film.id}}" class="list-group-item list-group-item-success fs-6">
             <span>{{ film.title }}</span>
         </li>

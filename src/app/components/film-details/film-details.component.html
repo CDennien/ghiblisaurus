@@ -1,11 +1,11 @@
 <div class="app-film-details" *ngIf="film">
     <div class="app-film-header px-4 pt-4">
-        <h6>{{ film.title }} | {{ film.director }}</h6>
-        <small class="fw-light">{{ film.original_title | uppercase }} ({{ film.release_date }})</small>
+        <h5>{{ film.title }}, {{ film.director }}</h5>
+        <h6 class="fw-light">{{ film.original_title | uppercase }} ({{ film.release_date }})</h6>
     </div>
 
-    <div class="app-film-info clearfix p-4">
-        <img src="{{film.image}}" alt="" height="150px" class="film-img float-md-start">
+    <div class="app-film-info clearfix m-4">
+        <img src="{{film.image}}" alt="" height="300px" class="film-img float-md-start">
         <small>{{ film.description }}</small>
         <br>
         <span class="badge bg-success mt-2">Score: {{film.rt_score}} / 100</span>

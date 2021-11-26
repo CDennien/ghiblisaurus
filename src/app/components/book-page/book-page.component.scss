@@ -2,68 +2,56 @@
 $light-brown: #a0522d;
 $dark-brown: #804529;
 $page-white: rgb(241, 241, 241);
+$page-grey: rgb(198, 197, 197);
 $line-red: rgb(212, 89, 89);
 $fonts: 'Eras Bold ITC', 'Times New Roman', Times, serif;
 
 // Styles
 .cover-left {
     background-color: $light-brown;
-    width: 25rem;
-    height: 30rem;
-    transform: translateY(-50%);
-    right: 50%;
+    height: 60%;
+    width: 55%;
+    left: 30%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 .cover-right {
     background-color: $light-brown;
-    width: 25rem;
-    height: 30rem;
-    transform: translateY(-50%);
-    left: 50%;
+    height: 60%;
+    width: 55%;
+    left: 70%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .binder {
     background-color: $dark-brown;
-    width: 5rem;
-    height: 30rem;
+    width: 10%;
+    height: 60%;
 }
 
 .page-left {
     background-color: $page-white;
-    width: 23rem;
-    height: 28rem;
-    transform: translateY(-50%);
-    right: 50%;
+    height: 55%;
+    width: 45%;
+    left: 28%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding-right: 1rem;
 }
 
 .page-right {
     background-color: $page-white;
-    width: 23rem;
-    height: 28rem;
-    transform: translateY(-50%);
-    left: 50%;
+    height: 55%;
+    width: 45%;
+    left: 72%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding-left: 1rem;
 }
 
 .page-binder {
-    background-color: $page-white;
-    border-left: $line-red solid 3px;
-    border-right: $line-red solid 3px;
-    outline-offset: 2px;
-    width: 2rem;
-    height: 28rem;
+    background-color: $page-grey;
+    width: 5px;
+    height: 55%;
 }
 
-.tip {
-    width: 15%;
-    right: 0;
-}
