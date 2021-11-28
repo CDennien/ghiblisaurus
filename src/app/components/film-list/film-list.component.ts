@@ -1,8 +1,9 @@
 import { CoreEnvironment } from '@angular/compiler/src/compiler_facade_interface';
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import { Film } from 'src/app/film';
 import { FilmService } from 'src/app/services/film.service';
 import { environment } from 'src/environments/environment';
+import {takeUntil} from "rxjs";
 
 @Component({
   selector: 'app-film-list',
@@ -12,8 +13,10 @@ import { environment } from 'src/environments/environment';
 export class FilmListComponent implements OnInit {
   public films: Film[];
   public version: string = "1.0.0";
+  onDestroy: EventEmitter<any>;
 
-  constructor(private filmService: FilmService) { 
+  constructor(private filmService: FilmService) {
+    this.onDestroy = new EventEmitter();
     this.films = []
   }
 
@@ -21,7 +24,11 @@ export class FilmListComponent implements OnInit {
     this.getFilms();
   }
 
+  ngOnDestroy(): void {
+    this.onDestroy.emit();
+  }
+
   private getFilms(): void {
-    this.filmService.getFilms().subscribe(films => this.films = films)
+    this.filmService.getFilms().pipe(takeUntil(this.onDestroy)).subscribe(films => this.films = films)
   }
 }
